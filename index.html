@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python IDE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">Py</span><span>Workbench</span></div>
+    <div class="status"><span class="status-dot"></span>Local Python runtime</div>
+  </header>
+  <main class="workspace">
+    <section class="editor-panel">
+      <div class="panel-heading">
+        <div><span class="eyebrow">Workspace</span><h1>main.py</h1></div>
+        <button id="run-button" class="run-button" type="button"><span>▶</span> Run code</button>
+      </div>
+      <div class="editor-shell">
+        <pre id="highlight" aria-hidden="true"><code class="language-python"></code></pre>
+        <textarea id="editor" spellcheck="false" aria-label="Python code editor">def greet(name):
+    message = f"Hello, {name}!"
+    print(message)
+
+
+greet("Python")
+</textarea>
+      </div>
+      <div class="editor-footer"><span>Python 3</span><span id="cursor-position">Ln 1, Col 1</span></div>
+    </section>
+    <aside class="output-panel">
+      <div class="panel-heading output-heading"><div><span class="eyebrow">Console</span><h2>Output</h2></div><button id="clear-button" class="clear-button" type="button">Clear</button></div>
+      <pre id="output" class="output">Run your code to see output here.</pre>
+      <div class="tips"><span class="tip-label">Editor ready</span><p>Indentation follows blocks automatically. Quotes and brackets close as you type.</p></div>
+    </aside>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
